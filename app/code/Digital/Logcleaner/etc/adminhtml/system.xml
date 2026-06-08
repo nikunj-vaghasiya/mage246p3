@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="log_cleaner" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>DB Cleanup</label>
+            <tab>digital</tab>
+            <resource>Digital_Logcleaner::logcleaner</resource>
+            <group id="config" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Configuration</label>
+                <field id="days" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Select Months</label>
+                    <source_model>Digital\Logcleaner\Model\Days</source_model>
+                    <comment><![CDATA[<strong>Removes records older than selected months from:</strong> <br/>'report_event',<br/> 'report_viewed_product_index', <br/> 'report_compared_product_index', '<br/> 'customer_visitor', '<br/> 'search_query']]></comment>
+                 </field>
+            </group>
+        </section>
+    </system>
+</config>
